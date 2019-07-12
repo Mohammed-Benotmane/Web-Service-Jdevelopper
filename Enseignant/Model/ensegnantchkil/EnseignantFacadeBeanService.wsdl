@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://model/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://model/" name="EnseignantFacadeBeanService">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://model/" schemaLocation="EnseignantFacadeBeanService1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="queryByRange">
+    <part name="parameters" element="tns:queryByRange"/>
+  </message>
+  <message name="queryByRangeResponse">
+    <part name="parameters" element="tns:queryByRangeResponse"/>
+  </message>
+  <message name="removeEnseignant">
+    <part name="parameters" element="tns:removeEnseignant"/>
+  </message>
+  <message name="getEnseignantFindAll">
+    <part name="parameters" element="tns:getEnseignantFindAll"/>
+  </message>
+  <message name="getEnseignantFindAllResponse">
+    <part name="parameters" element="tns:getEnseignantFindAllResponse"/>
+  </message>
+  <message name="getEnseignantFindEnseignantByID">
+    <part name="parameters" element="tns:getEnseignantFindEnseignantByID"/>
+  </message>
+  <message name="getEnseignantFindEnseignantByIDResponse">
+    <part name="parameters" element="tns:getEnseignantFindEnseignantByIDResponse"/>
+  </message>
+  <portType name="EnseignantFacadeBeanService">
+    <operation name="queryByRange">
+      <input message="tns:queryByRange" wsam:Action="http://model/EnseignantFacadeBeanService/queryByRangeRequest"/>
+      <output message="tns:queryByRangeResponse"
+              wsam:Action="http://model/EnseignantFacadeBeanService/queryByRangeResponse"/>
+    </operation>
+    <operation name="removeEnseignant">
+      <input message="tns:removeEnseignant" wsam:Action="http://model/EnseignantFacadeBeanService/removeEnseignant"/>
+    </operation>
+    <operation name="getEnseignantFindAll">
+      <input message="tns:getEnseignantFindAll"
+             wsam:Action="http://model/EnseignantFacadeBeanService/getEnseignantFindAllRequest"/>
+      <output message="tns:getEnseignantFindAllResponse"
+              wsam:Action="http://model/EnseignantFacadeBeanService/getEnseignantFindAllResponse"/>
+    </operation>
+    <operation name="getEnseignantFindEnseignantByID">
+      <input message="tns:getEnseignantFindEnseignantByID"
+             wsam:Action="http://model/EnseignantFacadeBeanService/getEnseignantFindEnseignantByIDRequest"/>
+      <output message="tns:getEnseignantFindEnseignantByIDResponse"
+              wsam:Action="http://model/EnseignantFacadeBeanService/getEnseignantFindEnseignantByIDResponse"/>
+    </operation>
+  </portType>
+  <binding name="EnseignantFacadeBeanServicePortBinding" type="tns:EnseignantFacadeBeanService">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="queryByRange">
+      <soap12:operation soapAction="" soapActionRequired="false"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="removeEnseignant">
+      <soap12:operation soapAction="" soapActionRequired="false"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+    </operation>
+    <operation name="getEnseignantFindAll">
+      <soap12:operation soapAction="" soapActionRequired="false"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getEnseignantFindEnseignantByID">
+      <soap12:operation soapAction="" soapActionRequired="false"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="EnseignantFacadeBeanService">
+    <port name="EnseignantFacadeBeanServicePort" binding="tns:EnseignantFacadeBeanServicePortBinding">
+      <soap12:address location="http://localhost:7101/Enseignant-Model-context-root/EnsegnantChkilService"/>
+    </port>
+  </service>
+</definitions>

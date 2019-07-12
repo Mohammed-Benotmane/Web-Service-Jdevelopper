@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="etudiantNotesPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="getEtudiantAfficherEtudiantParParcour_arg0" IsQueriable="false"/>
+    </variableIterator>
+    <methodIterator Binds="getEtudiantAfficherEtudiantParParcour.result" DataControl="EtudiantPage" RangeSize="25"
+                    BeanClass="model.EtudiantPage.getEtudiantAfficherEtudiantParParcour.Return"
+                    id="getEtudiantAfficherEtudiantParParcourIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="getEtudiantAfficherEtudiantParParcour" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="getEtudiantAfficherEtudiantParParcour" IsViewObjectMethod="false"
+                  DataControl="EtudiantPage" InstanceName="bindings.getEtudiantAfficherEtudiantParParcour.dataControl"
+                  ReturnName="data.EtudiantPage.methodResults.getEtudiantAfficherEtudiantParParcour_getEtudiantAfficherEtudiantParParcour_dataControl_getEtudiantAfficherEtudiantParParcour_result">
+      <NamedData NDName="arg0" NDType="java.lang.String"
+                 NDValue="${bindings.getEtudiantAfficherEtudiantParParcour_arg0}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="arg0">
+      <AttrNames>
+        <Item Value="getEtudiantAfficherEtudiantParParcour_arg0"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="enseignantPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <methodIterator Binds="getEnseignantFindEnseignantByID.result" DataControl="enseignantData" RangeSize="25"
+                    BeanClass="model.enseignantData.getEnseignantFindEnseignantByID.Return"
+                    id="getEnseignantFindEnseignantByIDIterator"/>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="getEnseignantFindEnseignantByID_arg0" IsQueriable="false"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <methodAction id="getEnseignantFindEnseignantByID" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="getEnseignantFindEnseignantByID" IsViewObjectMethod="false" DataControl="enseignantData"
+                  InstanceName="bindings.getEnseignantFindEnseignantByID.dataControl"
+                  ReturnName="data.enseignantData.methodResults.getEnseignantFindEnseignantByID_getEnseignantFindEnseignantByID_dataControl_getEnseignantFindEnseignantByID_result">
+      <NamedData NDName="arg0" NDType="java.lang.String" NDValue="${bindings.getEnseignantFindEnseignantByID_arg0}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="arg0">
+      <AttrNames>
+        <Item Value="getEnseignantFindEnseignantByID_arg0"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="getEnseignantFindEnseignantByIDIterator" id="nom">
+      <AttrNames>
+        <Item Value="nom"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

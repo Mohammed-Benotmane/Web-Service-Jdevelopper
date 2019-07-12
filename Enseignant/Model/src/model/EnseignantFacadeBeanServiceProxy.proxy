@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="EnseignantFacadeBeanService_Service.xml"/>
+      <url path="EnseignantFacadeBeanService.wsdl"/>
+      <url path="EnseignantFacadeBeanService1.xsd"/>
+      <url path="QueryByRangeResponse.java"/>
+      <url path="GetEnseignantFindAll.java"/>
+      <url path="Enseignant.java"/>
+      <url path="package-info.java"/>
+      <url path="GetEnseignantFindEnseignantByIDResponse.java"/>
+      <url path="RemoveEnseignant.java"/>
+      <url path="EnseignantFacadeBeanServicePortClient.java"/>
+      <url path="EnseignantFacadeBeanService.java"/>
+      <url path="GetEnseignantFindEnseignantByID.java"/>
+      <url path="EnseignantFacadeBeanService_Service.java"/>
+      <url path="QueryByRange.java"/>
+      <url path="ObjectFactory.java"/>
+      <url path="GetEnseignantFindAllResponse.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MIME"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="EnseignantFacadeBeanService_Service.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_NONE"/>
+      <list n="PROXY_CLIENTS">
+         <url path="EnseignantFacadeBeanServicePortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="http" host="localhost" port="7101" path="/ProjetFinal-Model-webapp/EnseignantFacadeBeanService" query="WSDL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="EnseignantFacadeBeanServicePort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="model.EnseignantFacadeBeanService"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="EnseignantFacadeBeanServicePort"/>
+            <hash n="OPERATIONS">
+               <hash n="getEnseignantFindAll">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getEnseignantFindEnseignantByID">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="queryByRange">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="removeEnseignant">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_POLICY">
+                  <value n="addressing"/>
+                  <hash n="GLOBAL_CONFIG_PROPERTIES"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <list n="wsconfig"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="localhost" port="7101" path="/ProjetFinal-Model-webapp/EnseignantFacadeBeanService"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="EnseignantFacadeBeanService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://model/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../Model.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST">
+         <url path="EnseignantFacadeBeanService1.xsd"/>
+      </list>
+      <url n="PROXY_WSDL_URL" path="EnseignantFacadeBeanService.wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BD_SOAP_VERSION" v="1.2"/>
+               <value n="BOUND_PORT_TYPE" v="{http://model/}EnseignantFacadeBeanService"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://model/}EnseignantFacadeBeanServicePortBinding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;model.Enseignant>.getEnseignantFindEnseignantByID.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;model.Enseignant>.getEnseignantFindAll"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="java.lang.Object.queryByRange.java.lang.String.int.int"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="void.removeEnseignant.model.Enseignant"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="aeed1624-016b-1000-8012-c0a82bd31d8b"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="EnseignantFacadeBeanServicePort"/>
+               <value n="PORT_BINDING_NAME" v="{http://model/}EnseignantFacadeBeanServicePortBinding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;model.Enseignant>.getEnseignantFindEnseignantByID.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;model.Enseignant>.getEnseignantFindAll"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.Object.queryByRange.java.lang.String.int.int"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.removeEnseignant.model.Enseignant"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="localhost" port="7101" path="/ProjetFinal-Model-webapp/EnseignantFacadeBeanService"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://model/}EnseignantFacadeBeanService"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="model.EnseignantFacadeBeanServiceImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="model.EnseignantFacadeBeanService"/>
+               <value n="PT_TOP_DOWN_GENERATED_SEI_NAME" v="model.EnseignantFacadeBeanService"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../Model.jpr"/>
+         <value n="WS_CREATE_ONEWAY_OPERATIONS" v="true"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://model/"/>
+         <value n="WS_URI" v="EnseignantFacadeBeanService"/>
+         <url n="WS_WSDL_FILE" path="EnseignantFacadeBeanService.wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+   </hash>
+</jdevws:WebServiceProxy>

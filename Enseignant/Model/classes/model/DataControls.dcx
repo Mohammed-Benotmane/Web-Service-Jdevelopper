@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.9.14" id="DataControls"
+                    Package="model">
+  <AdapterDataControl id="enseignantData" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.webservice.WSDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="model.enseignantData"
+                      BeanClass="model.enseignantData" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <definition xmlns="http://xmlns.oracle.com/adfm/adapter/webservice" name="enseignantData" version="1.0"
+                  provider="oracle.adfinternal.model.adapter.webservice.provider.soap.SOAPProvider"
+                  wsdl="enseignantdata\EnseignantFacadeBeanService.wsdl" ensureKeyAttribute="true"
+                  useWSDLIdentity="true" dcStructureVersion="2" UsePersistedStructure="false">
+        <service name="EnseignantFacadeBeanService" namespace="http://model/" connection="enseignantData">
+          <port name="EnseignantFacadeBeanServicePort">
+            <operation name="getEnseignantFindEnseignantByID"/>
+            <operation name="getEnseignantFindAll"/>
+            <operation name="queryByRange"/>
+            <operation name="removeEnseignant"/>
+          </port>
+        </service>
+      </definition>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

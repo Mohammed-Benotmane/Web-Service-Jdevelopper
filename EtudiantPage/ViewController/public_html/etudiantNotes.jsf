@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="etudiantNotes.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelBox text="PanelBox1" id="pb1">
+                <f:facet name="toolbar"/>
+                <af:panelFormLayout id="pfl1">
+                    <af:inputText label="Parcours Id"
+                                  required="#{bindings.arg0.hints.mandatory}"
+                                  columns="#{bindings.arg0.hints.displayWidth}"
+                                  maximumLength="#{bindings.arg0.hints.precision}"
+                                  shortDesc="#{bindings.arg0.hints.tooltip}" id="it1">
+                        <f:validator binding="#{bindings.arg0.validator}"/>
+                    </af:inputText>
+                    <af:button actionListener="#{bindings.getEtudiantAfficherEtudiantParParcour.execute}"
+                               text="Afficher les etudiants"
+                               disabled="#{!bindings.getEtudiantAfficherEtudiantParParcour.enabled}" id="b1"/>
+                </af:panelFormLayout>
+            </af:panelBox>
+        </af:form>
+    </af:document>
+</f:view>

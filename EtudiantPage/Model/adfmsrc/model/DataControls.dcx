@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.9.14" id="DataControls"
+                    Package="model">
+  <AdapterDataControl id="EtudiantPage" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.webservice.WSDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="model.EtudiantPage"
+                      BeanClass="model.EtudiantPage" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <definition xmlns="http://xmlns.oracle.com/adfm/adapter/webservice" name="EtudiantPage" version="1.0"
+                  provider="oracle.adfinternal.model.adapter.webservice.provider.soap.SOAPProvider"
+                  wsdl="etudiantpage\TestParcourBeanService.wsdl" ensureKeyAttribute="true" useWSDLIdentity="true"
+                  dcStructureVersion="2" UsePersistedStructure="false">
+        <service name="TestParcourBeanService" namespace="http://model/" connection="EtudiantPage">
+          <port name="TestParcourBeanServicePort">
+            <operation name="getEtudiantAfficherEtudiantParParcour"/>
+            <operation name="queryByRange"/>
+          </port>
+        </service>
+      </definition>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

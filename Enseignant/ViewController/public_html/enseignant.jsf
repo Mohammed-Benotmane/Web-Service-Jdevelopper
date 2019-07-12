@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="enseignant.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelSplitter id="ps1" splitterPosition="406">
+                <f:facet name="first">
+                    <af:panelFormLayout id="pfl1">
+                        <af:inputText value="#{bindings.arg0.inputValue}" label="#{bindings.arg0.hints.label}"
+                                      required="#{bindings.arg0.hints.mandatory}"
+                                      columns="#{bindings.arg0.hints.displayWidth}"
+                                      maximumLength="#{bindings.arg0.hints.precision}"
+                                      shortDesc="#{bindings.arg0.hints.tooltip}" id="it1">
+                            <f:validator binding="#{bindings.arg0.validator}"/>
+                        </af:inputText>
+                        <af:button actionListener="#{bindings.getEnseignantFindEnseignantByID.execute}"
+                                   text="getEnseignantFindEnseignantByID"
+                                   disabled="#{!bindings.getEnseignantFindEnseignantByID.enabled}" id="b1"/>
+                        <af:outputText value="#{bindings.nom.inputValue}" shortDesc="#{bindings.nom.hints.tooltip}"
+                                       id="ot1"/>
+                    </af:panelFormLayout>
+                </f:facet>
+                <f:facet name="second"/>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

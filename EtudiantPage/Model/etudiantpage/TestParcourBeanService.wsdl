@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://model/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://model/" name="TestParcourBeanService">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://model/" schemaLocation="TestParcourBeanService1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="queryByRange">
+    <part name="parameters" element="tns:queryByRange"/>
+  </message>
+  <message name="queryByRangeResponse">
+    <part name="parameters" element="tns:queryByRangeResponse"/>
+  </message>
+  <message name="getEtudiantAfficherEtudiantParParcour">
+    <part name="parameters" element="tns:getEtudiantAfficherEtudiantParParcour"/>
+  </message>
+  <message name="getEtudiantAfficherEtudiantParParcourResponse">
+    <part name="parameters" element="tns:getEtudiantAfficherEtudiantParParcourResponse"/>
+  </message>
+  <portType name="TestParcourBeanService">
+    <operation name="queryByRange">
+      <input message="tns:queryByRange" wsam:Action="http://model/TestParcourBeanService/queryByRangeRequest"/>
+      <output message="tns:queryByRangeResponse"
+              wsam:Action="http://model/TestParcourBeanService/queryByRangeResponse"/>
+    </operation>
+    <operation name="getEtudiantAfficherEtudiantParParcour">
+      <input message="tns:getEtudiantAfficherEtudiantParParcour"
+             wsam:Action="http://model/TestParcourBeanService/getEtudiantAfficherEtudiantParParcourRequest"/>
+      <output message="tns:getEtudiantAfficherEtudiantParParcourResponse"
+              wsam:Action="http://model/TestParcourBeanService/getEtudiantAfficherEtudiantParParcourResponse"/>
+    </operation>
+  </portType>
+  <binding name="TestParcourBeanServicePortBinding" type="tns:TestParcourBeanService">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="queryByRange">
+      <soap12:operation soapAction="" soapActionRequired="false"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getEtudiantAfficherEtudiantParParcour">
+      <soap12:operation soapAction="" soapActionRequired="false"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="TestParcourBeanService">
+    <port name="TestParcourBeanServicePort" binding="tns:TestParcourBeanServicePortBinding">
+      <soap12:address location="http://localhost:7101/EtudiantPage-Model-context-root/EtudiantPageService"/>
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns0="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://model/" localpart="EnseignantFacadeBeanService"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://model/" localpart="EnseignantFacadeBeanServicePort"/>
+         <runtime/>
+         <operations>
+            <operation name="getEnseignantFindEnseignantByID"/>
+            <operation name="getEnseignantFindAll"/>
+            <operation name="queryByRange"/>
+            <operation name="removeEnseignant"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>
